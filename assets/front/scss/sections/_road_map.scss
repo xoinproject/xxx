@@ -1,0 +1,172 @@
+ 
+/*=========================
+** Road Map Area
+=========================*/
+.road-map-area{
+    @extend .section-title-margin-60;
+    padding-top: 105px;
+    padding-bottom: 120px;
+}
+.cf:before,
+.Timeline-item:before,
+.Timeline-item-top:before,
+.cf:after,
+.Timeline-item:after,
+.Timeline-item-top:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after,
+.Timeline-item:after,
+.Timeline-item-top:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.Timeline {
+    width: 830px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.Timeline-line {
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -20px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.Timeline-line:after {
+    content: "";
+    position: absolute;
+    border-left: 1px solid $base-color;
+    height: 100%;
+}
+
+.Timeline-line.is-active .Timeline-line-menu {
+    opacity: 1;
+}
+
+.Timeline.is-dragging .Timeline-item-inner {
+    margin: 0;
+    opacity: .7;
+}
+
+.Timeline-item {
+    width: 100%;
+    position: relative;
+    z-index: 90;
+}
+
+.Timeline-item-inner {
+    position: relative;
+    margin-bottom: 40px;
+    width: 342px;
+    border: 1px solid $secondary-color;
+    @include transition( all .3s ease);
+    &:hover{
+        .Timeline-item-top {
+            background-color: $base-color;
+        }
+    }
+}
+
+.Timeline-item-inner:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -81px;
+    border-radius: 50%;
+    @include transform(translateY(-50%));
+    background-color: $base-color;
+    width: 12px;
+    height: 12px;
+}
+
+.Timeline-item-inner:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    height: 0;
+    width: 0;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid $secondary-color;
+    border-top: 8px solid transparent;
+    @include transform(translateY(-50%));
+    @include transition(all .2s ease);
+}
+.Timeline-item-inner:hover:after {
+    border-left-color: $base-color !important;
+}
+
+
+.Timeline-item:hover .Timeline-item-inner {
+    border-color: $base-color;
+    @include transition( all .3s ease);
+}
+
+.Timeline-item:hover .Timeline-item-inner:after {
+    height: 0;
+    width: 0;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid $secondary-color;
+    border-top: 8px solid transparent;
+    @include transition( all .3s ease);
+}
+
+.Timeline-item:nth-child(odd) {
+    margin-left: 50%;
+    padding-left: 70px;
+    width: 50%;
+}
+
+
+.Timeline-item:nth-child(odd) .Timeline-item-inner:before {
+    right: auto;
+    left: -77px;
+}
+
+.Timeline-item:nth-child(odd) .Timeline-item-inner:after {
+    height: 0;
+    width: 0;
+    border-bottom: 8px solid transparent;
+    border-right: 8px solid $secondary-color;
+    border-top: 8px solid transparent;
+    border-left: 0;
+    right: auto;
+    left: -9px;
+    @include transition( all .3s ease);
+}
+.Timeline-item:nth-child(odd):hover .Timeline-item-inner:after {
+    border-right: 8px solid $base-color;
+}
+
+
+.Timeline-item-top {
+    background-color: $secondary-color;
+    padding: 10px 15px;
+    color: $white;
+    text-transform: uppercase;
+    @include transition( all .3s ease);
+}
+
+
+.Timeline-item-content {
+    background-color: #fff;
+    padding: 20px 20px 20px;
+    text-align: left;
+    @include transition( all .3s ease);
+}

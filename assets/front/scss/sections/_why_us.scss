@@ -1,0 +1,26 @@
+/*=========================
+** Why Us Area
+=========================*/
+.why-us-area {
+    padding-top: 105px;
+    padding-bottom: 90px;
+    background-color: $section-bg-color;
+    @extend .section-title-margin;
+    .single-why-us-box{
+        &:hover{
+            h4,.icon{
+                color: $base-color;
+            }
+        }
+        h4{
+            text-transform: uppercase;
+            @extend .transition;
+            margin-bottom: 15px;
+        }
+        .icon{
+            font-size: 35px;
+            margin-bottom: 15px;
+            @extend .transition;
+        }
+    }
+}

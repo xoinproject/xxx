@@ -1,0 +1,59 @@
+/*=========================
+** About us
+=========================*/
+.about-us-area{
+    padding: 120px 0;;
+    .about-us-image{
+        position: relative;
+        .hover{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            opacity: .6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            a{
+                width: 80px;
+                height: 80px;
+                font-size: 25px;
+                line-height: 80px;
+                text-align: center;
+                background-color: $base-color;
+                display: inline-block;
+                color: $white;
+                border-radius: 50%;
+                cursor: pointer;
+                i{
+                    color: $white;
+                }
+            }
+        }
+    }
+    .about-us-content{
+        h2{
+            margin-top: 0;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+        .coin-ended-on{
+            .single-coin-box{
+                .icon{
+                    font-size: 35px;
+                    color:$base-color;
+                    margin-bottom: 10px;
+                }
+                .counter-text{
+                    font-size: 30px;
+                    font-weight: 600;
+                }
+                h5{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

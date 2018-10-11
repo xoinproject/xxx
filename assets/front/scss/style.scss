@@ -1,0 +1,25 @@
+
+/*==============================
+** Main Scss
+==============================*/
+@import "main/_variables";
+@import "main/_mixins";
+@import "main/_global";
+@import "main/_normalize";
+
+/*=========================
+** Sections Scss File
+=========================*/
+@import "sections/_navbar";
+@import "sections/_header";
+@import "sections/_about_us";
+@import "sections/_why_us";
+@import "sections/_road_map";
+@import "sections/_partner_logo_carousel";
+@import "sections/_subsciption_section";
+@import "sections/_team_section";
+@import "sections/_footer";
+
+/*=========================
+** Responsive Scss File
+=========================*/

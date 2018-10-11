@@ -1,0 +1,37 @@
+/*=========================
+** navbar css
+=========================*/
+.navbar-area{
+        padding-top: 10px;
+        padding-bottom: 18px;
+        &.nav-fixed {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: auto;
+            background: #fff;
+            z-index: 99;
+            box-shadow: 0 0 5px #eee;
+        }
+    .logo{
+        img{
+            margin-top: 10px;
+        }
+    }
+    li{
+        display: inline-block;
+        a{
+            padding: 5px 15px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        &.boxed-btn {
+            background-color: $base-color;
+            padding: 10px 15px;
+            a{
+                color: $white;
+            }
+        }
+    }
+}
